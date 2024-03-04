@@ -5,7 +5,7 @@
     text-align: center;
   }
   body{
-    background: #81b29a;
+    background-image: linear-gradient(to right, #6A02FB , #DB1255)
   }
   header{
     display: flex;
@@ -71,19 +71,23 @@
     color: #fff;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   }
-  button :hover{
+  button:hover{
     background-color: #ff000d;
   }
   .todoContainer {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    position: relative;
+  }
+  .todoItem{
+    cursor: pointer;
+  }
+  .todoItem p:hover{
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   }
   p{
-    margin: 20px;
+    margin: 5px;
     font-size: 18px;
     background: #9bf6ff;
     width: 300px;
@@ -92,6 +96,7 @@
     height: auto;
     padding: 20px;
     border-radius: 8px;
+    position: relative;
   }
   i{
     margin: 0px 0px 0px -27px;
@@ -99,10 +104,15 @@
   }
   .deletebtn{
     position: absolute;
-    bottom: 10px;
     background-color: #fff;
     padding: 6px;
     border-radius: 50%;
+    margin-top: -33px;
+    right: 6px;
+  }
+  .deletebtn:hover{
+    background-color: #1067f3;
+    color: white;
   }
   footer{
     height: 1rem;
@@ -120,7 +130,7 @@ footer a{
     font-style: italic;
     font-weight: bold;
 }
-  @media only screen and (max-width: 700px) and (min-width: 350px){
+  @media only screen and (max-width: 810px) and (min-width: 350px){
     header{
         padding: 0;
         display: flex;
@@ -132,18 +142,25 @@ footer a{
         display: none;
     }
     .header-logo a{
-        font-size: .6rem;
+        font-size: .8rem;
     }
     .container{
       margin: 10px;
       margin-top: 50px;
+    }
+    .container h1{
+      font-size: 20px;
     }
     .todoInput{
       width: 230px;
       margin-right: 10px;
       
     }
+    p{
+      margin: 10px;
+    }
     button{
-      padding: 10px 20px;
+      padding: 10px 25px;
+      font-size: 14px;
     }
   }
