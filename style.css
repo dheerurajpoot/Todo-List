@@ -86,6 +86,9 @@
   .todoItem p:hover{
     box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   }
+  .todoItem:hover .deletebtn{
+    display: block;
+  }
   p{
     margin: 5px;
     font-size: 18px;
@@ -109,6 +112,8 @@
     border-radius: 50%;
     margin-top: -33px;
     right: 6px;
+    display: none;
+    transition: 0.3s;
   }
   .deletebtn:hover{
     background-color: #1067f3;
@@ -162,5 +167,8 @@ footer a{
     button{
       padding: 10px 25px;
       font-size: 14px;
+    }
+    .deletebtn{
+      display: block;
     }
   }

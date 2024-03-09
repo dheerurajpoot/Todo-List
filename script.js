@@ -1,5 +1,6 @@
 const todoInput = document.querySelector('.todoInput');
-const todoButton = document.querySelector('.todoButton');
+const todoForm = document.querySelector('.todo-form');
+// const todoButton = document.querySelector('.todoButton');
 const todoContainer = document.querySelector('.todoContainer');
 
 // get data from local storage
@@ -31,7 +32,8 @@ const creatTodoElements = (newTodo) => {
   todoItem.appendChild(data);
   todoItem.appendChild(deleteBtn);
 
-  todoContainer.appendChild(todoItem);
+  // todoContainer.appendChild(todoItem);
+  todoContainer.insertBefore(todoItem, todoContainer.children[0]);
 
   todoInput.value = '';
 }
@@ -65,6 +67,6 @@ const displayTodo = () => {
 }
 
 displayTodo()
-todoButton.addEventListener('click', (e) => {
+todoForm.addEventListener('submit', (e) => {
   submitData(e);
 });
