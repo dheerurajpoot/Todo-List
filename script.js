@@ -29,8 +29,14 @@ const creatTodoElements = (newTodo) => {
     removeTodo(newTodo);
   });
 
+  //  edit todo button 
+  const editTodoBtn = document.createElement('i');
+  editTodoBtn.classList.add('editbtn', 'fas', 'fa-edit');
+
+
   todoItem.appendChild(data);
   todoItem.appendChild(deleteBtn);
+  todoItem.appendChild(editTodoBtn);
 
   // todoContainer.appendChild(todoItem);
   todoContainer.insertBefore(todoItem, todoContainer.children[0]);
@@ -70,3 +76,4 @@ displayTodo()
 todoForm.addEventListener('submit', (e) => {
   submitData(e);
 });
+

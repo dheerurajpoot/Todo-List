@@ -119,6 +119,23 @@
     background-color: #1067f3;
     color: white;
   }
+  .editbtn{
+    position: absolute;
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    margin-top: -63px;
+    right: 6px;
+    display: none;
+    transition: 0.3s;
+  }
+  .todoItem:hover .editbtn{
+    display: block;
+  }
+  .editbtn:hover{
+    background-color: #1067f3;
+    color: white;
+  }
   footer{
     height: 1rem;
     color: white;
